@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+Test set: facade.Epic4AlternativeTests
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in facade.Epic4AlternativeTests
+shouldPrintEmptyHistory  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+expected: <All purchases made: 
+Total profit: 0.00 SEK
+Total items sold: 0 units
+Total purchases made: 0 transactions
+------------------------------------
+------------------------------------
+> but was: <>
+	at facade.Epic4AlternativeTests.shouldPrintEmptyHistory(Epic4AlternativeTests.java:76)
+
+shouldBeZeroForNonExistentItems  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0.0> but was: <-1.0>
+	at facade.Epic4AlternativeTests.shouldBeZeroForNonExistentItems(Epic4AlternativeTests.java:44)
+
+shouldPrintErrorForNoTransactions  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Item ID1 was not registered yet.> but was: <>
+	at facade.Epic4AlternativeTests.shouldPrintErrorForNoTransactions(Epic4AlternativeTests.java:57)
+
+shouldBeZeroForEmptyTransactions  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0.0> but was: <-1.0>
+	at facade.Epic4AlternativeTests.shouldBeZeroForEmptyTransactions(Epic4AlternativeTests.java:30)
+

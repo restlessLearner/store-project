@@ -1,0 +1,62 @@
+-------------------------------------------------------------------------------
+Test set: facade.Epic4RegularTests
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 0.01 s <<< FAILURE! - in facade.Epic4RegularTests
+shouldGetSoldUnitsFromItem  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <19> but was: <-1>
+	at facade.Epic4RegularTests.shouldGetSoldUnitsFromItem(Epic4RegularTests.java:95)
+
+shouldGetTotalTransactions  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <9> but was: <-1>
+	at facade.Epic4RegularTests.shouldGetTotalTransactions(Epic4RegularTests.java:69)
+
+shouldPrintTransactionsFromItem  Time elapsed: 0.005 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+expected: <Transactions for item: ID1: Black T-shirt. 150.99 SEK
+ID1: 3 item(s). 452.97 SEK
+ID1: 5 item(s). 709.65 SEK
+ID1: 10 item(s). 1238.11 SEK
+ID1: 1 item(s). 150.99 SEK
+> but was: <>
+	at facade.Epic4RegularTests.shouldPrintTransactionsFromItem(Epic4RegularTests.java:119)
+
+shouldGetTotalUnitsSold  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <27> but was: <-1>
+	at facade.Epic4RegularTests.shouldGetTotalUnitsSold(Epic4RegularTests.java:62)
+
+shouldPrintMostProfitableItems  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+expected: <Most profitable items: 
+Total profit: 3998.00 SEK
+ID2: Winter jacket. 999.50 SEK
+> but was: <>
+	at facade.Epic4RegularTests.shouldPrintMostProfitableItems(Epic4RegularTests.java:159)
+
+shouldPrintAllTransactions  Time elapsed: 0.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+expected: <All purchases made: 
+Total profit: 9850.12 SEK
+Total items sold: 27 units
+Total purchases made: 9 transactions
+------------------------------------
+ID1: 3 item(s). 452.97 SEK
+ID1: 5 item(s). 709.65 SEK
+ID1: 10 item(s). 1238.11 SEK
+ID1: 1 item(s). 150.99 SEK
+ID2: 1 item(s). 999.50 SEK
+ID2: 3 item(s). 2998.50 SEK
+ID3: 1 item(s). 450.20 SEK
+ID3: 1 item(s). 450.20 SEK
+ID5: 2 item(s). 2400.00 SEK
+------------------------------------
+> but was: <>
+	at facade.Epic4RegularTests.shouldPrintAllTransactions(Epic4RegularTests.java:148)
+
+shouldGetProfitFromAnItem  Time elapsed: 0.002 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <2551.71> but was: <-1.0>
+	at facade.Epic4RegularTests.shouldGetProfitFromAnItem(Epic4RegularTests.java:77)
+
+shouldGetTotalProfit  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <9850.11> but was: <-1.0>
+	at facade.Epic4RegularTests.shouldGetTotalProfit(Epic4RegularTests.java:55)
+

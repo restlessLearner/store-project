@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: facade.Epic3AlternateTests
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 4, Errors: 2, Skipped: 0, Time elapsed: 0.019 s <<< FAILURE! - in facade.Epic3AlternateTests
+shouldPrintErrorWhenInvalidReviewIndex  Time elapsed: 0.009 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Item Leather jacket has not been reviewed yet.> but was: <>
+	at facade.Epic3AlternateTests.shouldPrintErrorWhenInvalidReviewIndex(Epic3AlternateTests.java:86)
+
+shouldPrintErrorForInvalidReview  Time elapsed: 0.005 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Item ID1 not found.> but was: <Item ID1 was not registered yet.>
+	at facade.Epic3AlternateTests.shouldPrintErrorForInvalidReview(Epic3AlternateTests.java:39)
+
+shouldPrintErrorForEmptyReviews  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Item ID2 was not registered yet.> but was: <>
+	at facade.Epic3AlternateTests.shouldPrintErrorForEmptyReviews(Epic3AlternateTests.java:71)
+
+shouldGetEmptyItemComments  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at facade.Epic3AlternateTests.shouldGetEmptyItemComments(Epic3AlternateTests.java:59)
+
+shouldPrintErrorWhenNoReviewCreated  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <No items registered yet.> but was: <>
+	at facade.Epic3AlternateTests.shouldPrintErrorWhenNoReviewCreated(Epic3AlternateTests.java:103)
+
+shouldGetEmptyWhenNoReviewCreated  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException
+	at facade.Epic3AlternateTests.shouldGetEmptyWhenNoReviewCreated(Epic3AlternateTests.java:122)
+

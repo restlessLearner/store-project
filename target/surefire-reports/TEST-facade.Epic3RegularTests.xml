@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="facade.Epic3RegularTests" time="0.111" tests="14" errors="2" skipped="0" failures="12">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.class.path" value="E:\Univer\Y1p1\OOP\Project\DIT043_Project_Group7\target\test-classes;E:\Univer\Y1p1\OOP\Project\DIT043_Project_Group7\target\classes;C:\Users\bs4pu\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.1\junit-jupiter-5.8.1.jar;C:\Users\bs4pu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\bs4pu\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\bs4pu\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\bs4pu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\bs4pu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.1\junit-jupiter-params-5.8.1.jar;C:\Users\bs4pu\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\bs4pu\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="user.timezone" value="Europe/Berlin"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.boot.library.path" value="C:\Java\jdk11\bin"/>
+    <property name="sun.java.command" value="C:\Users\bs4pu\AppData\Local\Temp\surefire3370960760046340840\surefirebooter17509472545730591997.jar C:\Users\bs4pu\AppData\Local\Temp\surefire3370960760046340840 2021-10-23T17-22-14_775-jvmRun1 surefire8891027483331922477tmp surefire_011222998200059474802tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="E:\Univer\Y1p1\OOP\Project\DIT043_Project_Group7\target\test-classes;E:\Univer\Y1p1\OOP\Project\DIT043_Project_Group7\target\classes;C:\Users\bs4pu\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.1\junit-jupiter-5.8.1.jar;C:\Users\bs4pu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\bs4pu\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\bs4pu\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\bs4pu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\bs4pu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.1\junit-jupiter-params-5.8.1.jar;C:\Users\bs4pu\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\bs4pu\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\bs4pu"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-07-20"/>
+    <property name="java.home" value="C:\Java\jdk11"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="E:\Univer\Y1p1\OOP\Project\DIT043_Project_Group7"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\bs4pu\AppData\Local\Temp\surefire3370960760046340840\surefirebooter17509472545730591997.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.12+8-LTS-237"/>
+    <property name="user.name" value="bs4pu"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1251"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="localRepository" value="C:\Users\bs4pu\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\bs4pu\AppData\Local\Temp\"/>
+    <property name="java.version" value="11.0.12"/>
+    <property name="user.dir" value="E:\Univer\Y1p1\OOP\Project\DIT043_Project_Group7"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Java\jdk11\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Java\apache-maven-3.8.3\bin;C:\Users\bs4pu\AppData\Local\Microsoft\WindowsApps;;C:\Java\intellijidea\intellij21.2.1\bin;;."/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.12+8-LTS-237"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="shouldGetItemsWithLeastReviews" classname="facade.Epic3RegularTests" time="0.01">
+    <failure message="expected: &lt;[ID3]&gt; but was: &lt;null&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <[ID3]> but was: <null>
+	at facade.Epic3RegularTests.shouldGetItemsWithLeastReviews(Epic3RegularTests.java:195)
+]]></failure>
+    <system-out><![CDATA[Item ID1 was registered successfully.
+Item ID2 was registered successfully.
+Item ID3 was registered successfully.
+Item ID4 was registered successfully.
+Item ID5 was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+]]></system-out>
+  </testcase>
+  <testcase name="shouldGetItemsWithMostReviews" classname="facade.Epic3RegularTests" time="0">
+    <failure message="expected: &lt;[ID1, ID5]&gt; but was: &lt;null&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <[ID1, ID5]> but was: <null>
+	at facade.Epic3RegularTests.shouldGetItemsWithMostReviews(Epic3RegularTests.java:160)
+]]></failure>
+    <system-out><![CDATA[Item ID1 was registered successfully.
+Item ID2 was registered successfully.
+Item ID3 was registered successfully.
+Item ID4 was registered successfully.
+Item ID5 was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+]]></system-out>
+  </testcase>
+  <testcase name="shouldGetItemsWithBestReviews" classname="facade.Epic3RegularTests" time="0">
+    <failure message="expected: &lt;[ID1]&gt; but was: &lt;null&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <[ID1]> but was: <null>
+	at facade.Epic3RegularTests.shouldGetItemsWithBestReviews(Epic3RegularTests.java:297)
+]]></failure>
+    <system-out><![CDATA[Item ID1 was registered successfully.
+Item ID2 was registered successfully.
+Item ID3 was registered successfully.
+Item ID4 was registered successfully.
+Item ID5 was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+]]></system-out>
+  </testcase>
+  <testcase name="shouldPrintItemsWithLeastReviews" classname="facade.Epic3RegularTests" time="0.011">
+    <failure message="expected: &lt;Least reviews: 1 review(s) each.&#10;ID3: High heels. 450.20 SEK&#10;&gt; but was: &lt;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+expected: <Least reviews: 1 review(s) each.
+ID3: High heels. 450.20 SEK
+> but was: <>
+	at facade.Epic3RegularTests.shouldPrintItemsWithLeastReviews(Epic3RegularTests.java:216)
+]]></failure>
+    <system-out><![CDATA[Item ID1 was registered successfully.
+Item ID2 was registered successfully.
+Item ID3 was registered successfully.
+Item ID4 was registered successfully.
+Item ID5 was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+]]></system-out>
+  </testcase>
+  <testcase name="shouldGetItemsWithWorseReviews" classname="facade.Epic3RegularTests" time="0">
+    <failure message="expected: &lt;[ID5]&gt; but was: &lt;null&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <[ID5]> but was: <null>
+	at facade.Epic3RegularTests.shouldGetItemsWithWorseReviews(Epic3RegularTests.java:278)
+]]></failure>
+    <system-out><![CDATA[Item ID1 was registered successfully.
+Item ID2 was registered successfully.
+Item ID3 was registered successfully.
+Item ID4 was registered successfully.
+Item ID5 was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+]]></system-out>
+  </testcase>
+  <testcase name="shouldPrintItemsWithMostReviews" classname="facade.Epic3RegularTests" time="0.009">
+    <failure message="expected: &lt;Most reviews: 3 review(s) each.&#10;ID1: Black T-shirt. 150.99 SEK&#10;ID5: Leather jacket. 1200.00 SEK&#10;&gt; but was: &lt;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+expected: <Most reviews: 3 review(s) each.
+ID1: Black T-shirt. 150.99 SEK
+ID5: Leather jacket. 1200.00 SEK
+> but was: <>
+	at facade.Epic3RegularTests.shouldPrintItemsWithMostReviews(Epic3RegularTests.java:176)
+]]></failure>
+    <system-out><![CDATA[Item ID1 was registered successfully.
+Item ID2 was registered successfully.
+Item ID3 was registered successfully.
+Item ID4 was registered successfully.
+Item ID5 was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+]]></system-out>
+  </testcase>
+  <testcase name="shouldPrintItemsWithBestReviews" classname="facade.Epic3RegularTests" time="0.008">
+    <failure message="expected: &lt;Items with best mean reviews:&#10;Grade: 4.3&#10;ID1: Black T-shirt. 150.99 SEK&#10;&gt; but was: &lt;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+expected: <Items with best mean reviews:
+Grade: 4.3
+ID1: Black T-shirt. 150.99 SEK
+> but was: <>
+	at facade.Epic3RegularTests.shouldPrintItemsWithBestReviews(Epic3RegularTests.java:237)
+]]></failure>
+    <system-out><![CDATA[Item ID1 was registered successfully.
+Item ID2 was registered successfully.
+Item ID3 was registered successfully.
+Item ID4 was registered successfully.
+Item ID5 was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+]]></system-out>
+  </testcase>
+  <testcase name="shouldPrintItemsWithWorseReviews" classname="facade.Epic3RegularTests" time="0.003">
+    <failure message="expected: &lt;Items with worst mean reviews:&#10;Grade: 1.6&#10;ID5: Leather jacket. 1200.00 SEK&#10;&gt; but was: &lt;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+expected: <Items with worst mean reviews:
+Grade: 1.6
+ID5: Leather jacket. 1200.00 SEK
+> but was: <>
+	at facade.Epic3RegularTests.shouldPrintItemsWithWorseReviews(Epic3RegularTests.java:258)
+]]></failure>
+    <system-out><![CDATA[Item ID1 was registered successfully.
+Item ID2 was registered successfully.
+Item ID3 was registered successfully.
+Item ID4 was registered successfully.
+Item ID5 was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+]]></system-out>
+  </testcase>
+  <testcase name="shouldGetCommentsFromItem" classname="facade.Epic3RegularTests" time="0.005">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at facade.Epic3RegularTests.shouldGetCommentsFromItem(Epic3RegularTests.java:123)
+</error>
+    <system-out><![CDATA[Item ID1 was registered successfully.
+Item ID2 was registered successfully.
+Item ID3 was registered successfully.
+Item ID4 was registered successfully.
+Item ID5 was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+]]></system-out>
+  </testcase>
+  <testcase name="shouldGetSpecificItemReviews" classname="facade.Epic3RegularTests" time="0.014">
+    <failure message="expected: &lt;Grade: 1.Not worth the price.&gt; but was: &lt;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Grade: 1.Not worth the price.> but was: <>
+	at facade.Epic3RegularTests.shouldGetSpecificItemReviews(Epic3RegularTests.java:149)
+]]></failure>
+    <system-out><![CDATA[Item ID1 was registered successfully.
+Item ID2 was registered successfully.
+Item ID3 was registered successfully.
+Item ID4 was registered successfully.
+Item ID5 was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+]]></system-out>
+  </testcase>
+  <testcase name="shouldPrintAllReviews" classname="facade.Epic3RegularTests" time="0.021">
+    <failure message="expected: &lt;All registered reviews:&#10;------------------------------------&#10;Review(s) for ID1: Black T-shirt. 150.99 SEK&#10;Grade: 4.Good material for the price.&#10;Grade: 5.&#10;Grade: 4.Great item but could be better.&#10;------------------------------------&#10;Review(s) for ID3: High heels. 450.20 SEK&#10;Grade: 3.They are less comfortable than I thought.&#10;------------------------------------&#10;Review(s) for ID5: Leather jacket. 1200.00 SEK&#10;Grade: 1.Not worth the price.&#10;Grade: 2.The delivery took too long.&#10;Grade: 2.&#10;------------------------------------&#10;&gt; but was: &lt;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+expected: <All registered reviews:
+------------------------------------
+Review(s) for ID1: Black T-shirt. 150.99 SEK
+Grade: 4.Good material for the price.
+Grade: 5.
+Grade: 4.Great item but could be better.
+------------------------------------
+Review(s) for ID3: High heels. 450.20 SEK
+Grade: 3.They are less comfortable than I thought.
+------------------------------------
+Review(s) for ID5: Leather jacket. 1200.00 SEK
+Grade: 1.Not worth the price.
+Grade: 2.The delivery took too long.
+Grade: 2.
+------------------------------------
+> but was: <>
+	at facade.Epic3RegularTests.shouldPrintAllReviews(Epic3RegularTests.java:108)
+]]></failure>
+    <system-out><![CDATA[Item ID1 was registered successfully.
+Item ID2 was registered successfully.
+Item ID3 was registered successfully.
+Item ID4 was registered successfully.
+Item ID5 was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+]]></system-out>
+  </testcase>
+  <testcase name="shouldSuccessfullyCreateReview" classname="facade.Epic3RegularTests" time="0.01">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at facade.Epic3RegularTests.shouldSuccessfullyCreateReview(Epic3RegularTests.java:74)
+</error>
+    <system-out><![CDATA[Item ID1 was registered successfully.
+Item ID2 was registered successfully.
+Item ID3 was registered successfully.
+Item ID4 was registered successfully.
+Item ID5 was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+]]></system-out>
+  </testcase>
+  <testcase name="shouldGetReviewScoresFromAllItems" classname="facade.Epic3RegularTests" time="0.009">
+    <failure message="expected: &lt;3&gt; but was: &lt;-1&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <3> but was: <-1>
+	at facade.Epic3RegularTests.shouldGetReviewScoresFromAllItems(Epic3RegularTests.java:87)
+]]></failure>
+    <system-out><![CDATA[Item ID1 was registered successfully.
+Item ID2 was registered successfully.
+Item ID3 was registered successfully.
+Item ID4 was registered successfully.
+Item ID5 was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+]]></system-out>
+  </testcase>
+  <testcase name="shouldPrintReviewsFromItem" classname="facade.Epic3RegularTests" time="0.011">
+    <failure message="expected: &lt;Review(s) for ID1: Black T-shirt. 150.99 SEK&#10;Grade: 4.Good material for the price.&#10;Grade: 5.&#10;Grade: 4.Great item but could be better.&#10;&gt; but was: &lt;&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+expected: <Review(s) for ID1: Black T-shirt. 150.99 SEK
+Grade: 4.Good material for the price.
+Grade: 5.
+Grade: 4.Great item but could be better.
+> but was: <>
+	at facade.Epic3RegularTests.shouldPrintReviewsFromItem(Epic3RegularTests.java:140)
+]]></failure>
+    <system-out><![CDATA[Item ID1 was registered successfully.
+Item ID2 was registered successfully.
+Item ID3 was registered successfully.
+Item ID4 was registered successfully.
+Item ID5 was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+Your item review was registered successfully.
+]]></system-out>
+  </testcase>
+</testsuite>
