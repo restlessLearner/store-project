@@ -1,8 +1,8 @@
-package Interaction;
+package input;
 
 import java.util.Scanner;
 
-public class InputOutput {
+public class UserInput {
 
     public static Scanner userInput = new Scanner(System.in);
 

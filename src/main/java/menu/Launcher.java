@@ -1,5 +1,6 @@
-package Interaction;
+package menu;
 
+import input.UserInput;
 import facade.Facade;
 
 public class Launcher {
@@ -8,8 +9,8 @@ public class Launcher {
         Launcher.mainMenu();
     }
 
-    public static final String EOL = System.lineSeparator();
-    public static Facade facade = new Facade();
+    static final String EOL = System.lineSeparator();
+    static final Facade facade = new Facade();
 
     public static void mainMenu() {
 
@@ -20,14 +21,14 @@ public class Launcher {
                 "3. Open Transaction History options." + Launcher.EOL +
                 "4. Open Employee options." + Launcher.EOL;
 
-        InputOutput.printInfo(MAIN_MENU);
+        UserInput.printInfo(MAIN_MENU);
 
         int userAnswer;
-        userAnswer = InputOutput.readInt("Input option Number: ");
+        userAnswer = UserInput.readInt("Input option Number: ");
 
         switch (userAnswer) {
             case 0:
-                InputOutput.printInfo("The system has been closed.");
+                UserInput.printInfo("The system has been closed.");
                 break;
             case 1:
                 ItemMenu.itemMenu();
@@ -42,7 +43,7 @@ public class Launcher {
                 EmployeeOptions.employeeOptions();
                 break;
             default:
-                InputOutput.printInfo("Invalid menu option. Please type another option: ");
+                UserInput.printInfo("Invalid menu option. Please type another option: ");
                 mainMenu();
                 break;
         }
