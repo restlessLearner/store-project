@@ -8,7 +8,7 @@ public class ReviewsMenu {
     static final String EOL = System.lineSeparator();
     static final Facade facade = Launcher.facade;
 
-    public static void reviewsMenu() {
+    public static void reviewsMenu() throws Exception {
 
         final String REVIEWS_MENU = "Reviews options menu:" + EOL +
                 "0. Return to Main Menu." + EOL +

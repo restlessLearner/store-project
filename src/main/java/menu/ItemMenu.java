@@ -8,7 +8,7 @@ public class ItemMenu {
     static final String EOL = System.lineSeparator();
     static final Facade facade = Launcher.facade;
 
-    public static void itemMenu() {
+    public static void itemMenu() throws Exception {
 
         final String ITEM_MENU = "Item options menu: " + EOL +
                 "0. Return to Main Menu." + EOL +

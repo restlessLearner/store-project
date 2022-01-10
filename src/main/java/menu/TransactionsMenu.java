@@ -8,7 +8,7 @@ public class TransactionsMenu {
     static final String EOL = System.lineSeparator();
     static final Facade facade = Launcher.facade;
 
-    public static void transactionsMenu() {
+    public static void transactionsMenu() throws Exception {
 
         final String TRANSACTIONS_MENU = "Transaction History options menu:" + EOL +
                 "0. Return to Main Menu." + EOL +

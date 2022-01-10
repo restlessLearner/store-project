@@ -8,7 +8,7 @@ public class EmployeeOptions {
     static final String EOL = System.lineSeparator();
     static final Facade facade = Launcher.facade;
 
-    public static void employeeOptions() {
+    public static void employeeOptions() throws Exception {
 
         final String EMPLOYEES_MENU = "Employee options menu:" + EOL +
                 "0. Return to Main Menu." + EOL +

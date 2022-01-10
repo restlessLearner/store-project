@@ -5,14 +5,14 @@ import facade.Facade;
 
 public class Launcher {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Launcher.mainMenu();
     }
 
     static final String EOL = System.lineSeparator();
     static final Facade facade = new Facade();
 
-    public static void mainMenu() {
+    public static void mainMenu() throws Exception {
 
         String MAIN_MENU = "Main Menu: Please choose among the options below." + Launcher.EOL +
                 "0. Close system." + Launcher.EOL +
