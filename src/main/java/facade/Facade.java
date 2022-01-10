@@ -17,7 +17,7 @@ public class Facade {
 
     private ArrayList<Item> items;
     private ArrayList<Transaction> transactions;
-    //public ArrayList<Employee> employees;
+    public ArrayList<Employee> employees;
 
 
     // This class only has the skeleton of the methods used by the test.
@@ -27,7 +27,7 @@ public class Facade {
     public Facade() {
         this.items = new ArrayList<>();
         this.transactions = new ArrayList<>();
-        //this.employees = new ArrayList<>();
+        this.employees = new ArrayList<>();
     }
 
     //////////////////////////////// methods that were added to the initial Facade class//////////////////////////
