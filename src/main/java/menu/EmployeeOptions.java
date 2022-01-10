@@ -36,21 +36,17 @@ public class EmployeeOptions {
                     double grossSalary = UserInput.readDouble("Enter a new employee's salary before taxes: ");
                     facade.createEmployee(employeeID, employeeName, grossSalary);
                     break;
-                case 2:
+                case 2: // Create an employee (Manager)
                     break;
-                case 3:
+                case 3: // Create an employee (Director)
                     break;
-                case 4:
+                case 4: // Create an employee (Intern)
                     break;
-                case 5:
+                case 5: // Remove an employee
                     break;
-                case 6:
+                case 6: // Print specific employee
                     break;
-                case 7:
-                    break;
-                case 8:
-                    break;
-                case 9:
+                case 7: // Print all registered employees
                     break;
                 default:
                     UserInput.printInfo("Invalid menu option. Please type another option: ");

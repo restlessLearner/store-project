@@ -1,8 +1,6 @@
 package businessLogic;
 
-import exceptions.EmployeeException;
-
-import java.util.Objects;
+import exceptions.EmployeeInformationException;
 
 import static facade.Facade.truncateValue;
 
@@ -13,7 +11,7 @@ public class Manager extends Employee {
     public Manager(String id, String name, double grossSalary, String degree) throws Exception {
         super(id, name, grossSalary);
         if (degree.isEmpty() && !degree.equals("BSc") && !degree.equals("MSc") && degree.equals("PhD")) {
-            throw new EmployeeException("Manager's degree must be specified as BSc, MSc or PhD.");
+            throw new EmployeeInformationException("Degree must be one of the options: PhD, MSc or PhD.");
         }
         this.degree = degree;
     }
@@ -44,6 +42,7 @@ public class Manager extends Employee {
         return netSalary;
     }
 
+    @Override
     public double calculateNetSalary() {
         return this.calculateGrossSalary() - this.calculateGrossSalary() * 0.1;
     }

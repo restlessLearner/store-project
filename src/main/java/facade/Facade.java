@@ -65,6 +65,16 @@ public class Facade {
         return hasTransaction;
     }
 
+    public boolean containsEmployee(String id) {
+        boolean hasEmployee = false;
+        for (Employee employee : employees) {
+            if (employee.getId().equals(id)) {
+                hasEmployee = true;
+            }
+        }
+        return hasEmployee;
+    }
+
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -556,11 +566,19 @@ public class Facade {
     }
 
     public String createEmployee(String employeeID, String employeeName, double grossSalary) throws Exception {
-        Employee newEmployee = new Employee(employeeID, employeeName, grossSalary);
-        return "Employee " + employeeID + "was registered successfully";
+        if (!containsEmployee(employeeID)) {
+            Employee newEmployee = new Employee(employeeID, employeeName, grossSalary);
+            employees.add(newEmployee);
+            return "Employee " + employeeID + "was registered successfully.";
+        } else {
+            return "Employee " + employeeID + "already exists.";
+        }
     }
 
     public String printEmployee(String employeeID) throws Exception {
+        if (!containsEmployee(employeeID)){
+
+        }
         return "";
     }
 

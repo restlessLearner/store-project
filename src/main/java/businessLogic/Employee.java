@@ -1,6 +1,7 @@
 package businessLogic;
 
-import exceptions.EmployeeException;
+import exceptions.EmployeeInformationException;
+
 import java.util.Objects;
 
 public class Employee {
@@ -11,11 +12,11 @@ public class Employee {
 
     public Employee(String id, String name, double grossSalary) throws Exception {
         if (id.isEmpty()) {
-            throw new EmployeeException("Id number cannot not be empty.");
+            throw new EmployeeInformationException("ID cannot be blank.");
         } else if (name.isEmpty()) {
-            throw new EmployeeException("Name cannot be empty.");
+            throw new EmployeeInformationException("Name cannot be blank.");
         } else if (grossSalary <= 0) {
-            throw new EmployeeException("Salary must be greater than 0.");
+            throw new EmployeeInformationException("Salary must be greater than 0.");
         } else {
             this.id = id;
             this.name = name;
@@ -53,6 +54,7 @@ public class Employee {
         return getName() + "'s gross salary is " + getGrossSalary() + " SEK per month.";
     }
 
+    @Override
     public boolean equals(Object another) {
         if (this == another) {
             return true;
@@ -68,6 +70,7 @@ public class Employee {
         }
     }
 
+    @Override
     public int hashCode() {
         return Objects.hash(id);
     }
