@@ -1,13 +1,14 @@
 package facade;
 
-import businessLogic.Employee;
-import businessLogic.Transaction;
+import businessLogic.*;
+import exceptions.EmployeeEmptyListException;
+import exceptions.EmployeeInformationException;
+import exceptions.EmployeeNotFoundException;
 import input.UserInput;
 import menu.Launcher;
-import businessLogic.Item;
-import businessLogic.Review;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
@@ -41,7 +42,7 @@ public class Facade {
         Item neededItem = null;
         for (Item currentItem : items) {
             if (currentItem.getItemId().equals(itemID)) {
-                return currentItem;
+                neededItem = currentItem;
             }
         }
         return neededItem;
@@ -73,6 +74,16 @@ public class Facade {
             }
         }
         return hasEmployee;
+    }
+
+    public Employee retrieveEmployee(String id) {
+        Employee neededEmployee = null;
+        for (Employee currentEmployee : employees) {
+            if (currentEmployee.getId().equals(id)) {
+                neededEmployee = currentEmployee;
+            }
+        }
+        return neededEmployee;
     }
 
 
@@ -569,72 +580,182 @@ public class Facade {
         if (!containsEmployee(employeeID)) {
             Employee newEmployee = new Employee(employeeID, employeeName, grossSalary);
             employees.add(newEmployee);
-            return "Employee " + employeeID + "was registered successfully.";
+            return "Employee " + employeeID + " was registered successfully.";
         } else {
-            return "Employee " + employeeID + "already exists.";
+            return "Employee " + employeeID + " already exists.";
         }
     }
 
     public String printEmployee(String employeeID) throws Exception {
-        if (!containsEmployee(employeeID)){
-
+        Employee empToPrint = retrieveEmployee(employeeID);
+        if (!containsEmployee(employeeID)) {
+            throw new EmployeeNotFoundException(employeeID);
+        } else if (empToPrint == null) {
+            throw new EmployeeNotFoundException(employeeID);
+        } else {
+            return empToPrint.toString();
         }
-        return "";
     }
 
-    public String createEmployee(String employeeID, String employeeName, double grossSalary, String degree) throws
-            Exception {
-        return "";
+    public String createEmployee(String employeeID, String employeeName, double grossSalary, String degree) throws Exception {
+        if (!containsEmployee(employeeID)) {
+            Employee manager = new Manager(employeeID, employeeName, truncateValue(grossSalary, 2), degree);
+            employees.add(manager);
+            return "Employee " + employeeID + " was registered successfully.";
+        } else {
+            return "Employee " + employeeID + " already exists.";
+        }
     }
 
-    public String createEmployee(String employeeID, String employeeName, double grossSalary, int gpa) throws
-            Exception {
-        return "";
+    public String createEmployee(String employeeID, String employeeName, double grossSalary, int gpa) throws Exception {
+        if (!containsEmployee(employeeID)) {
+            Employee intern = new Intern(employeeID, employeeName, grossSalary, gpa);
+            employees.add(intern);
+            return "Employee " + employeeID + " was registered successfully.";
+        } else {
+            return "Employee " + employeeID + " already exists.";
+        }
     }
 
     public double getNetSalary(String employeeID) throws Exception {
-        return -1.0;
+        Employee empToGetNetSalary = retrieveEmployee(employeeID);
+        if (!containsEmployee(employeeID) || empToGetNetSalary == null) {
+            throw new EmployeeNotFoundException(employeeID);
+        } else {
+            return empToGetNetSalary.calculateNetSalary();
+        }
     }
 
-    public String createEmployee(String employeeID, String employeeName, double grossSalary, String
-            degree, String dept) throws Exception {
-        return "";
+    public String createEmployee(String employeeID, String employeeName, double grossSalary, String degree, String dept) throws Exception {
+        if (!containsEmployee(employeeID)) {
+            Employee director = new Director(employeeID, employeeName, grossSalary, degree, dept);
+            employees.add(director);
+            return "Employee " + employeeID + " was registered successfully.";
+        } else {
+            return "Employee " + employeeID + " already exists.";
+        }
     }
 
     public String removeEmployee(String empID) throws Exception {
-        return "";
+        Employee empToRemove = retrieveEmployee(empID);
+        if (!containsEmployee(empID) || empToRemove == null) {
+            throw new EmployeeNotFoundException(empID);
+        } else {
+            employees.remove(empToRemove);
+            return "Employee " + empID + " was successfully removed.";
+        }
     }
 
     public String printAllEmployees() throws Exception {
-        return "";
+        String printedList = "";
+        if (employees.size() > 0) {
+            printedList = "All registered employees:" + EOL;
+            for (Employee employee : employees) {
+                printedList += employee.toString() + EOL;
+            }
+        } else {
+            throw new EmployeeEmptyListException();
+        }
+        return printedList;
     }
 
     public double getTotalNetSalary() throws Exception {
-        return -1.0;
+        double total = 0.0;
+        if (employees.size() > 0) {
+            for (Employee employee : employees) {
+                total += employee.calculateNetSalary();
+            }
+        } else {
+            throw new EmployeeEmptyListException();
+        }
+        return truncateValue(total, 2);
     }
 
     public String printSortedEmployees() throws Exception {
+       /* String printedList = "Employees sorted by gross salary (ascending order): " + EOL;
+        employees.sort(new Comparator<Employee>() {
+            @Override
+            public int compare(Employee o1, Employee o2) {
+                if (o1.calculateGrossSalary() == o2.calculateGrossSalary()) {
+                    return 0;
+                } else if (o1.calculateGrossSalary() > o2.calculateGrossSalary()) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            }
+        });
+        for (int i = 0; i < employees.size(); i++) {
+            printedList +=
+        }*/
         return "";
     }
 
     public String updateEmployeeName(String empID, String newName) throws Exception {
-        return "";
+        Employee empToUpdateName = retrieveEmployee(empID);
+        if (!containsEmployee(empID) || empToUpdateName == null) {
+            throw new EmployeeNotFoundException(empID);
+        } else if (newName.isBlank()) {
+            throw new EmployeeInformationException("Name cannot be blank.");
+        } else {
+            empToUpdateName.setName(newName);
+            return "Employee " + empID + " was updated successfully";
+        }
     }
 
     public String updateInternGPA(String empID, int newGPA) throws Exception {
-        return "";
+        Employee empToChangeGPA = retrieveEmployee(empID);
+        if (!containsEmployee(empID) || empToChangeGPA == null) {
+            throw new EmployeeNotFoundException(empID);
+        } else if (newGPA < 0 || newGPA > 10) {
+            throw new EmployeeInformationException(newGPA + " outside range. Must be between 0-10.");
+        } else {
+            Intern intern = (Intern) empToChangeGPA;
+            intern.setGPA(newGPA);
+            return "Employee " + empID + " was updated successfully";
+        }
     }
 
     public String updateManagerDegree(String empID, String newDegree) throws Exception {
-        return "";
+        Employee empToChangeDegree = retrieveEmployee(empID);
+        if (!containsEmployee(empID) || empToChangeDegree == null) {
+            throw new EmployeeNotFoundException(empID);
+        } else if (newDegree.isEmpty() && !newDegree.equals("BSc") && !newDegree.equals("MSc") && newDegree.equals("PhD")) {
+            throw new EmployeeInformationException("Degree must be one of the options: PhD, MSc or PhD.");
+        } else {
+            Manager manager = (Manager) empToChangeDegree;
+            manager.setDegree(newDegree);
+            return "Employee " + empID + " was updated successfully";
+        }
     }
 
     public String updateDirectorDept(String empID, String newDepartment) throws Exception {
-        return "";
+        String message = "";
+        Employee empToChangeDept = retrieveEmployee(empID);
+        if (!containsEmployee(empID) || empToChangeDept == null) {
+            throw new EmployeeNotFoundException(empID);
+        } else if (newDepartment.isEmpty() && !newDepartment.equals("Human Resources") && !newDepartment.equals("Technical") && !newDepartment.equals("Business")) {
+            throw new EmployeeInformationException("Department must be one of the options: Business, Human Resources or Technical.");
+        } else {
+            Director director = (Director) empToChangeDept;
+            director.setDepartment(newDepartment);
+            message = "Employee " + empID + " was updated successfully";
+        }
+        return message;
     }
 
     public String updateGrossSalary(String empID, double newSalary) throws Exception {
-        return "";
+        String message = "";
+        Employee empToChangeSalary = retrieveEmployee(empID);
+        if (!containsEmployee(empID) || empToChangeSalary == null) {
+            throw new EmployeeNotFoundException(empID);
+        } else if (newSalary < 0) {
+            throw new EmployeeInformationException("Salary must be greater than 0.");
+        } else {
+            empToChangeSalary.setGrossSalary(newSalary);
+            message = "Employee " + empID + " was updated successfully";
+        }
+        return message;
     }
 
     public Map<String, Integer> mapEachDegree() throws Exception {
@@ -642,17 +763,47 @@ public class Facade {
     }
 
     public String promoteToManager(String empID, String degree) throws Exception {
-        return "";
-
+        String message = "";
+        Employee empToManager = retrieveEmployee(empID);
+        if (!containsEmployee(empID) || empToManager == null) {
+            throw new EmployeeNotFoundException(empID);
+        } else {
+            String name = empToManager.getName();
+            double salary = empToManager.getRawSalary();
+            employees.remove(empToManager);
+            employees.add(new Manager(empID, name, salary, degree));
+            message = empID + " promoted successfully to Manager.";
+        }
+        return message;
     }
 
     public String promoteToDirector(String empID, String degree, String department) throws Exception {
-        return "";
+        String message = "";
+        Employee empToDirector = retrieveEmployee(empID);
+        if (!containsEmployee(empID) || empToDirector == null) {
+            throw new EmployeeNotFoundException(empID);
+        } else {
+            String name = empToDirector.getName();
+            double salary = empToDirector.getRawSalary();
+            employees.remove(empToDirector);
+            employees.add(new Director(empID, name, salary, degree, department));
+            message = empID + " promoted successfully to Director.";
+        }
+        return message;
     }
 
     public String promoteToIntern(String empID, int gpa) throws Exception {
-        return "";
+        String message = "";
+        Employee empToIntern = retrieveEmployee(empID);
+        if (!containsEmployee(empID) || empToIntern == null) {
+            throw new EmployeeNotFoundException(empID);
+        } else {
+            String name = empToIntern.getName();
+            double salary = empToIntern.getRawSalary();
+            employees.remove(empToIntern);
+            employees.add(new Intern(empID, name, salary, gpa));
+            message = empID + " promoted successfully to Intern.";
+        }
+        return message;
     }
-
-
 }

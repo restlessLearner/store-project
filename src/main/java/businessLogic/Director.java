@@ -27,12 +27,17 @@ public class Director extends Manager {
 
     @Override
     public String toString() {
-        return super.getDegree() + " " + super.getName() + "'s gross salary is " + String.format("%.2f", truncateValue(this.getGrossSalary(), 2)) + " SEK per month. Dept: " + this.department;
+        return super.getDegree() + " " + super.getName() + "'s gross salary is " + String.format("%.2f", truncateValue(this.calculateGrossSalary(), 2)) + " SEK per month. Dept: " + this.department;
+    }
+
+    @Override
+    public double getRawSalary() {
+        return super.getRawSalary();
     }
 
     @Override
     public double calculateGrossSalary() {
-        return super.getGrossSalary() + 5000;
+        return super.calculateGrossSalary() + 5000;
     }
 
     @Override

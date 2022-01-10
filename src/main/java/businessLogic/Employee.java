@@ -4,6 +4,8 @@ import exceptions.EmployeeInformationException;
 
 import java.util.Objects;
 
+import static facade.Facade.truncateValue;
+
 public class Employee {
 
     final private String id;
@@ -36,7 +38,11 @@ public class Employee {
         return this.id;
     }
 
-    public double getGrossSalary() {
+    public double getRawSalary() {
+        return this.grossSalary;
+    }
+
+    public double calculateGrossSalary() {
         return this.grossSalary;
     }
 
@@ -51,7 +57,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return getName() + "'s gross salary is " + getGrossSalary() + " SEK per month.";
+        return this.getName() + "'s gross salary is " + String.format("%.2f", truncateValue(this.calculateGrossSalary(), 2)) + " SEK per month.";
     }
 
     @Override

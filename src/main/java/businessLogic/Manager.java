@@ -25,21 +25,27 @@ public class Manager extends Employee {
     }
 
     @Override
+    public double getRawSalary() {
+        return super.getRawSalary();
+    }
+
+    @Override
     public String toString() {
-        return getDegree() + super.getName() + "'s gross salary is " + String.format("%.2f", truncateValue(this.getGrossSalary(), 2) + " SEK per month.");
+        return getDegree() + " " + super.getName() + "'s gross salary is " + String.format("%.2f", truncateValue(this.calculateGrossSalary(), 2)) + " SEK per month.";
     }
 
 
+    @Override
     public double calculateGrossSalary() {
-        double netSalary = 0.0;
+        double grossSalary = 0.0;
         if (degree.equals("BSc")) {
-            netSalary = super.getGrossSalary() + super.getGrossSalary() * 0.1;
+            grossSalary = super.calculateGrossSalary() + super.calculateGrossSalary() * 0.1;
         } else if (degree.equals("MSc")) {
-            netSalary = super.getGrossSalary() + super.getGrossSalary() * 0.2;
+            grossSalary = super.calculateGrossSalary() + super.calculateGrossSalary() * 0.2;
         } else if (degree.equals("PhD")) {
-            netSalary = super.getGrossSalary() + super.getGrossSalary() * 0.35;
+            grossSalary = super.calculateGrossSalary() + super.calculateGrossSalary() * 0.35;
         }
-        return netSalary;
+        return grossSalary;
     }
 
     @Override
