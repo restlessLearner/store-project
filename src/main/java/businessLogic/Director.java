@@ -2,7 +2,6 @@ package businessLogic;
 
 import exceptions.EmployeeException;
 
-import static facade.Facade.decimal;
 import static facade.Facade.truncateValue;
 
 public class Director extends Manager {
